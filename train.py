@@ -27,7 +27,11 @@ CAPACITY = 2000
 global learning_rate
 #learning_rate = 0.0001
 IS_PRETRAIN = True
-EPOCH = 100
+EPOCH = 20
+min_time = 1000000000
+First_test = True
+
+#Second_test = False
 
 DATA_DIR = '/home/NASICLab/nmsocug1/lab2_Li/lab2/dataset/'
 LOG_DIR = '/home/NASICLab/nmsocug1/lab2_Li/lab2/tensorflow/'
@@ -266,14 +270,36 @@ def train():
                     saver.save(sess, checkpoint_path, global_step=step)
                 
                 
-                if step % 3200 == 0:
+                if step % 12000 == 0:
                     precision = test()
                     if precision > Max:
                         print("I have the highest accuracy when step = %d!" % step)
                         Max = precision
                 
                 if step % step_per_epoch == 0:
-                    accu_list.append(test())
+                    # if(Second_test):
+                    #     import datetime
+                    #     start = datetime.datetime.now()
+                    #     precision = test()
+                    #     end = datetime.datetime.now()
+                    #     inteval = start - end
+                    #     with open("time.txt","a+") as f:
+                    #         f.write('time: {};'.format((inteval.microsecond)/6576))
+                    # else:
+                    #     precision = test()
+                    
+                    global min_time
+                    import datetime
+                    start = datetime.datetime.now()
+                    precision = test()
+                    end = datetime.datetime.now()
+                    inteval = start - end
+                    if(inteval.microseconds < min_time):
+                        min_time = inteval.microseconds
+                    with open("time.txt","w") as f:
+                        f.write('time: {};'.format((min_time)/6576))
+
+                    accu_list.append(precision)
                     loss_list.append(loss_value)
                 
             draw.draw_loss(EPOCH, loss_list, 'loss')
@@ -315,8 +341,13 @@ def test():
                     weights_initializer=tf.truncated_normal_initializer(stddev=0.1),
                     weights_regularizer=slim.l2_regularizer(0.0),
                     scope='Logits', reuse=False)
-
-        parameter_GFLOPS.stats_graph(graph)
+        
+        global First_test
+        #global Second_test
+        if(First_test):
+            parameter_GFLOPS.stats_graph(graph)
+            First_test = False
+            #Second_test = True
 
         top_k_op = tf.nn.in_top_k(logits, labels, 1)
         argmax = tf.argmax(logits,1)
