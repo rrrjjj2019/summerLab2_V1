@@ -304,6 +304,10 @@ def train():
                 
             draw.draw_loss(EPOCH, loss_list, 'loss')
             draw.draw_accu(EPOCH, accu_list, 'accu')
+
+            with open("loss_accu.txt","w") as f:
+                f.write('loss: {};'.format(loss_list))
+                f.write('accu: {};'.format(accu_list))
                     
         except tf.errors.OutOfRangeError:
             print('Done training -- epoch limit reached')
