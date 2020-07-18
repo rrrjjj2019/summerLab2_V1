@@ -1,6 +1,45 @@
 float = name: "_TFProfRoot"
 children {
-  name: "depth/conv3/conv"
+  name: "rgb/conv10/conv"
+  float_ops: 377487360
+  total_float_ops: 377487360
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 128
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 3
+      }
+      dim {
+        size: 3
+      }
+      dim {
+        size: 128
+      }
+      dim {
+        size: 256
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/conv2/conv"
   float_ops: 188743680
   total_float_ops: 188743680
   input_shapes {
@@ -39,7 +78,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/conv2/conv"
+  name: "depth/conv3/conv"
   float_ops: 188743680
   total_float_ops: 188743680
   input_shapes {
@@ -117,6 +156,45 @@ children {
   total_definition_count: 1
 }
 children {
+  name: "rgb/conv9/conv"
+  float_ops: 94371840
+  total_float_ops: 94371840
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 64
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 3
+      }
+      dim {
+        size: 3
+      }
+      dim {
+        size: 64
+      }
+      dim {
+        size: 128
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
   name: "rgb/conv5/conv"
   float_ops: 94371840
   total_float_ops: 94371840
@@ -156,45 +234,6 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/conv10/conv"
-  float_ops: 94371840
-  total_float_ops: 94371840
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 128
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 128
-      }
-      dim {
-        size: 256
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
   name: "rgb/conv1/conv"
   float_ops: 70778880
   total_float_ops: 70778880
@@ -228,123 +267,6 @@ children {
       }
       dim {
         size: 32
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "depth/conv7/conv"
-  float_ops: 47185920
-  total_float_ops: 47185920
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 8
-      }
-      dim {
-        size: 8
-      }
-      dim {
-        size: 64
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 64
-      }
-      dim {
-        size: 64
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "depth/conv5/conv"
-  float_ops: 47185920
-  total_float_ops: 47185920
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 16
-      }
-      dim {
-        size: 16
-      }
-      dim {
-        size: 32
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 32
-      }
-      dim {
-        size: 32
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "rgb/conv6/conv"
-  float_ops: 47185920
-  total_float_ops: 47185920
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 8
-      }
-      dim {
-        size: 8
-      }
-      dim {
-        size: 64
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 64
-      }
-      dim {
-        size: 64
       }
     }
   }
@@ -429,7 +351,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/conv9/conv"
+  name: "rgb/conv6/conv"
   float_ops: 47185920
   total_float_ops: 47185920
   input_shapes {
@@ -438,13 +360,13 @@ children {
         size: 10
       }
       dim {
-        size: 4
+        size: 8
       }
       dim {
-        size: 4
+        size: 8
       }
       dim {
-        size: 128
+        size: 64
       }
     }
   }
@@ -458,49 +380,10 @@ children {
         size: 3
       }
       dim {
-        size: 128
+        size: 64
       }
       dim {
-        size: 128
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "rgb/conv4/conv"
-  float_ops: 47185920
-  total_float_ops: 47185920
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 16
-      }
-      dim {
-        size: 16
-      }
-      dim {
-        size: 32
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 32
-      }
-      dim {
-        size: 32
+        size: 64
       }
     }
   }
@@ -546,6 +429,84 @@ children {
   total_definition_count: 1
 }
 children {
+  name: "depth/conv5/conv"
+  float_ops: 47185920
+  total_float_ops: 47185920
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 16
+      }
+      dim {
+        size: 16
+      }
+      dim {
+        size: 32
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 3
+      }
+      dim {
+        size: 3
+      }
+      dim {
+        size: 32
+      }
+      dim {
+        size: 32
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/conv4/conv"
+  float_ops: 47185920
+  total_float_ops: 47185920
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 16
+      }
+      dim {
+        size: 16
+      }
+      dim {
+        size: 32
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 3
+      }
+      dim {
+        size: 3
+      }
+      dim {
+        size: 32
+      }
+      dim {
+        size: 32
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
   name: "rgb/conv3/conv"
   float_ops: 47185920
   total_float_ops: 47185920
@@ -579,6 +540,72 @@ children {
       }
       dim {
         size: 32
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "depth/conv7/conv"
+  float_ops: 47185920
+  total_float_ops: 47185920
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 64
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 3
+      }
+      dim {
+        size: 3
+      }
+      dim {
+        size: 64
+      }
+      dim {
+        size: 64
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/fc11/MatMul"
+  float_ops: 41943040
+  total_float_ops: 41943040
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 4096
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 4096
+      }
+      dim {
+        size: 512
       }
     }
   }
@@ -663,45 +690,6 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/conv8/conv"
-  float_ops: 23592960
-  total_float_ops: 23592960
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 8
-      }
-      dim {
-        size: 8
-      }
-      dim {
-        size: 64
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 64
-      }
-      dim {
-        size: 128
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
   name: "depth/conv1/conv"
   float_ops: 23592960
   total_float_ops: 23592960
@@ -741,16 +729,40 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/fc12/MatMul"
-  float_ops: 2949120
-  total_float_ops: 2949120
+  name: "rgb/fc11/weights/Initializer/truncated_normal"
+  children {
+    name: "rgb/fc11/weights/Initializer/truncated_normal/mul"
+    float_ops: 2097152
+    total_float_ops: 2097152
+    input_shapes {
+      value {
+        dim {
+          size: 4096
+        }
+        dim {
+          size: 512
+        }
+      }
+    }
+    input_shapes {
+      key: 1
+      value {
+        dim {
+          size: 1
+        }
+      }
+    }
+    total_definition_count: 1
+  }
+  float_ops: 2097152
+  total_float_ops: 4194304
   input_shapes {
     value {
       dim {
-        size: 10
+        size: 4096
       }
       dim {
-        size: 1024
+        size: 512
       }
     }
   }
@@ -758,14 +770,11 @@ children {
     key: 1
     value {
       dim {
-        size: 1024
-      }
-      dim {
-        size: 144
+        size: 1
       }
     }
   }
-  total_definition_count: 1
+  total_definition_count: 2
 }
 children {
   name: "depth/fc10/MatMul"
@@ -795,22 +804,16 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/conv1/bias_add"
-  float_ops: 1310720
-  total_float_ops: 1310720
+  name: "rgb/fc12/MatMul"
+  float_ops: 1474560
+  total_float_ops: 1474560
   input_shapes {
     value {
       dim {
         size: 10
       }
       dim {
-        size: 64
-      }
-      dim {
-        size: 64
-      }
-      dim {
-        size: 32
+        size: 512
       }
     }
   }
@@ -818,7 +821,10 @@ children {
     key: 1
     value {
       dim {
-        size: 32
+        size: 512
+      }
+      dim {
+        size: 144
       }
     }
   }
@@ -869,6 +875,36 @@ children {
       dim {
         size: 64
       }
+      dim {
+        size: 32
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/conv1/bias_add"
+  float_ops: 1310720
+  total_float_ops: 1310720
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 64
+      }
+      dim {
+        size: 64
+      }
+      dim {
+        size: 32
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
       dim {
         size: 32
       }
@@ -1120,66 +1156,6 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/conv9/weights/Initializer/truncated_normal"
-  children {
-    name: "rgb/conv9/weights/Initializer/truncated_normal/mul"
-    float_ops: 147456
-    total_float_ops: 147456
-    input_shapes {
-      value {
-        dim {
-          size: 3
-        }
-        dim {
-          size: 3
-        }
-        dim {
-          size: 128
-        }
-        dim {
-          size: 128
-        }
-      }
-    }
-    input_shapes {
-      key: 1
-      value {
-        dim {
-          size: 1
-        }
-      }
-    }
-    total_definition_count: 1
-  }
-  float_ops: 147456
-  total_float_ops: 294912
-  input_shapes {
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 128
-      }
-      dim {
-        size: 128
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 2
-}
-children {
   name: "depth/conv9/weights/Initializer/truncated_normal"
   children {
     name: "depth/conv9/weights/Initializer/truncated_normal/mul"
@@ -1226,54 +1202,6 @@ children {
       }
       dim {
         size: 128
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 2
-}
-children {
-  name: "rgb/fc12/weights/Initializer/truncated_normal"
-  children {
-    name: "rgb/fc12/weights/Initializer/truncated_normal/mul"
-    float_ops: 147456
-    total_float_ops: 147456
-    input_shapes {
-      value {
-        dim {
-          size: 1024
-        }
-        dim {
-          size: 144
-        }
-      }
-    }
-    input_shapes {
-      key: 1
-      value {
-        dim {
-          size: 1
-        }
-      }
-    }
-    total_definition_count: 1
-  }
-  float_ops: 147456
-  total_float_ops: 294912
-  input_shapes {
-    value {
-      dim {
-        size: 1024
-      }
-      dim {
-        size: 144
       }
     }
   }
@@ -1372,6 +1300,58 @@ children {
   total_definition_count: 1
 }
 children {
+  name: "rgb/conv10/bias_add"
+  float_ops: 163840
+  total_float_ops: 163840
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 256
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 256
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/pool10"
+  float_ops: 163840
+  total_float_ops: 163840
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 256
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
   name: "rgb/pool5"
   float_ops: 163840
   total_float_ops: 163840
@@ -1442,9 +1422,57 @@ children {
   total_definition_count: 2
 }
 children {
-  name: "rgb/conv8/weights/Initializer/truncated_normal"
+  name: "rgb/fc12/weights/Initializer/truncated_normal"
   children {
-    name: "rgb/conv8/weights/Initializer/truncated_normal/mul"
+    name: "rgb/fc12/weights/Initializer/truncated_normal/mul"
+    float_ops: 73728
+    total_float_ops: 73728
+    input_shapes {
+      value {
+        dim {
+          size: 512
+        }
+        dim {
+          size: 144
+        }
+      }
+    }
+    input_shapes {
+      key: 1
+      value {
+        dim {
+          size: 1
+        }
+      }
+    }
+    total_definition_count: 1
+  }
+  float_ops: 73728
+  total_float_ops: 147456
+  input_shapes {
+    value {
+      dim {
+        size: 512
+      }
+      dim {
+        size: 144
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 2
+}
+children {
+  name: "depth/conv8/weights/Initializer/truncated_normal"
+  children {
+    name: "depth/conv8/weights/Initializer/truncated_normal/mul"
     float_ops: 73728
     total_float_ops: 73728
     input_shapes {
@@ -1502,9 +1530,9 @@ children {
   total_definition_count: 2
 }
 children {
-  name: "depth/conv8/weights/Initializer/truncated_normal"
+  name: "rgb/conv9/weights/Initializer/truncated_normal"
   children {
-    name: "depth/conv8/weights/Initializer/truncated_normal/mul"
+    name: "rgb/conv9/weights/Initializer/truncated_normal/mul"
     float_ops: 73728
     total_float_ops: 73728
     input_shapes {
@@ -1616,6 +1644,36 @@ children {
     value {
       dim {
         size: 32
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/conv9/bias_add"
+  float_ops: 81920
+  total_float_ops: 81920
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 128
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 128
       }
     }
   }
@@ -2101,7 +2159,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "depth/conv6/bias_add"
+  name: "depth/conv7/bias_add"
   float_ops: 40960
   total_float_ops: 40960
   input_shapes {
@@ -2131,7 +2189,29 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/conv6/bias_add"
+  name: "depth/pool7"
+  float_ops: 40960
+  total_float_ops: 40960
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 8
+      }
+      dim {
+        size: 64
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "depth/conv6/bias_add"
   float_ops: 40960
   total_float_ops: 40960
   input_shapes {
@@ -2191,7 +2271,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "depth/conv7/bias_add"
+  name: "rgb/conv6/bias_add"
   float_ops: 40960
   total_float_ops: 40960
   input_shapes {
@@ -2215,80 +2295,6 @@ children {
     value {
       dim {
         size: 64
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "rgb/pool10"
-  float_ops: 40960
-  total_float_ops: 40960
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 256
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "depth/pool7"
-  float_ops: 40960
-  total_float_ops: 40960
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 8
-      }
-      dim {
-        size: 8
-      }
-      dim {
-        size: 64
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "rgb/conv10/bias_add"
-  float_ops: 40960
-  total_float_ops: 40960
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 256
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 256
       }
     }
   }
@@ -2343,9 +2349,9 @@ children {
   total_definition_count: 2
 }
 children {
-  name: "rgb/conv5/weights/Initializer/truncated_normal"
+  name: "depth/conv6/weights/Initializer/truncated_normal"
   children {
-    name: "rgb/conv5/weights/Initializer/truncated_normal/mul"
+    name: "depth/conv6/weights/Initializer/truncated_normal/mul"
     float_ops: 18432
     total_float_ops: 18432
     input_shapes {
@@ -2403,9 +2409,9 @@ children {
   total_definition_count: 2
 }
 children {
-  name: "depth/conv6/weights/Initializer/truncated_normal"
+  name: "rgb/conv5/weights/Initializer/truncated_normal"
   children {
-    name: "depth/conv6/weights/Initializer/truncated_normal/mul"
+    name: "rgb/conv5/weights/Initializer/truncated_normal/mul"
     float_ops: 18432
     total_float_ops: 18432
     input_shapes {
@@ -2754,36 +2760,6 @@ children {
   total_definition_count: 9
 }
 children {
-  name: "depth/conv8/bias_add"
-  float_ops: 20480
-  total_float_ops: 20480
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 128
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 128
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
   name: "depth/conv9/bias_add"
   float_ops: 20480
   total_float_ops: 20480
@@ -2814,7 +2790,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/conv9/bias_add"
+  name: "depth/conv8/bias_add"
   float_ops: 20480
   total_float_ops: 20480
   input_shapes {
@@ -2844,39 +2820,9 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/conv8/bias_add"
-  float_ops: 20480
-  total_float_ops: 20480
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 4
-      }
-      dim {
-        size: 128
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 128
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "depth/conv3/weights/Initializer/truncated_normal"
+  name: "depth/conv4/weights/Initializer/truncated_normal"
   children {
-    name: "depth/conv3/weights/Initializer/truncated_normal/mul"
+    name: "depth/conv4/weights/Initializer/truncated_normal/mul"
     float_ops: 9216
     total_float_ops: 9216
     input_shapes {
@@ -2994,189 +2940,9 @@ children {
   total_definition_count: 2
 }
 children {
-  name: "depth/conv4/weights/Initializer/truncated_normal"
-  children {
-    name: "depth/conv4/weights/Initializer/truncated_normal/mul"
-    float_ops: 9216
-    total_float_ops: 9216
-    input_shapes {
-      value {
-        dim {
-          size: 3
-        }
-        dim {
-          size: 3
-        }
-        dim {
-          size: 32
-        }
-        dim {
-          size: 32
-        }
-      }
-    }
-    input_shapes {
-      key: 1
-      value {
-        dim {
-          size: 1
-        }
-      }
-    }
-    total_definition_count: 1
-  }
-  float_ops: 9216
-  total_float_ops: 18432
-  input_shapes {
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 32
-      }
-      dim {
-        size: 32
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 2
-}
-children {
   name: "depth/conv2/weights/Initializer/truncated_normal"
   children {
     name: "depth/conv2/weights/Initializer/truncated_normal/mul"
-    float_ops: 9216
-    total_float_ops: 9216
-    input_shapes {
-      value {
-        dim {
-          size: 3
-        }
-        dim {
-          size: 3
-        }
-        dim {
-          size: 32
-        }
-        dim {
-          size: 32
-        }
-      }
-    }
-    input_shapes {
-      key: 1
-      value {
-        dim {
-          size: 1
-        }
-      }
-    }
-    total_definition_count: 1
-  }
-  float_ops: 9216
-  total_float_ops: 18432
-  input_shapes {
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 32
-      }
-      dim {
-        size: 32
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 2
-}
-children {
-  name: "depth/conv5/weights/Initializer/truncated_normal"
-  children {
-    name: "depth/conv5/weights/Initializer/truncated_normal/mul"
-    float_ops: 9216
-    total_float_ops: 9216
-    input_shapes {
-      value {
-        dim {
-          size: 3
-        }
-        dim {
-          size: 3
-        }
-        dim {
-          size: 32
-        }
-        dim {
-          size: 32
-        }
-      }
-    }
-    input_shapes {
-      key: 1
-      value {
-        dim {
-          size: 1
-        }
-      }
-    }
-    total_definition_count: 1
-  }
-  float_ops: 9216
-  total_float_ops: 18432
-  input_shapes {
-    value {
-      dim {
-        size: 3
-      }
-      dim {
-        size: 3
-      }
-      dim {
-        size: 32
-      }
-      dim {
-        size: 32
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 2
-}
-children {
-  name: "rgb/conv2/weights/Initializer/truncated_normal"
-  children {
-    name: "rgb/conv2/weights/Initializer/truncated_normal/mul"
     float_ops: 9216
     total_float_ops: 9216
     input_shapes {
@@ -3294,6 +3060,258 @@ children {
   total_definition_count: 2
 }
 children {
+  name: "rgb/conv2/weights/Initializer/truncated_normal"
+  children {
+    name: "rgb/conv2/weights/Initializer/truncated_normal/mul"
+    float_ops: 9216
+    total_float_ops: 9216
+    input_shapes {
+      value {
+        dim {
+          size: 3
+        }
+        dim {
+          size: 3
+        }
+        dim {
+          size: 32
+        }
+        dim {
+          size: 32
+        }
+      }
+    }
+    input_shapes {
+      key: 1
+      value {
+        dim {
+          size: 1
+        }
+      }
+    }
+    total_definition_count: 1
+  }
+  float_ops: 9216
+  total_float_ops: 18432
+  input_shapes {
+    value {
+      dim {
+        size: 3
+      }
+      dim {
+        size: 3
+      }
+      dim {
+        size: 32
+      }
+      dim {
+        size: 32
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 2
+}
+children {
+  name: "depth/conv5/weights/Initializer/truncated_normal"
+  children {
+    name: "depth/conv5/weights/Initializer/truncated_normal/mul"
+    float_ops: 9216
+    total_float_ops: 9216
+    input_shapes {
+      value {
+        dim {
+          size: 3
+        }
+        dim {
+          size: 3
+        }
+        dim {
+          size: 32
+        }
+        dim {
+          size: 32
+        }
+      }
+    }
+    input_shapes {
+      key: 1
+      value {
+        dim {
+          size: 1
+        }
+      }
+    }
+    total_definition_count: 1
+  }
+  float_ops: 9216
+  total_float_ops: 18432
+  input_shapes {
+    value {
+      dim {
+        size: 3
+      }
+      dim {
+        size: 3
+      }
+      dim {
+        size: 32
+      }
+      dim {
+        size: 32
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 2
+}
+children {
+  name: "depth/conv3/weights/Initializer/truncated_normal"
+  children {
+    name: "depth/conv3/weights/Initializer/truncated_normal/mul"
+    float_ops: 9216
+    total_float_ops: 9216
+    input_shapes {
+      value {
+        dim {
+          size: 3
+        }
+        dim {
+          size: 3
+        }
+        dim {
+          size: 32
+        }
+        dim {
+          size: 32
+        }
+      }
+    }
+    input_shapes {
+      key: 1
+      value {
+        dim {
+          size: 1
+        }
+      }
+    }
+    total_definition_count: 1
+  }
+  float_ops: 9216
+  total_float_ops: 18432
+  input_shapes {
+    value {
+      dim {
+        size: 3
+      }
+      dim {
+        size: 3
+      }
+      dim {
+        size: 32
+      }
+      dim {
+        size: 32
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 2
+}
+children {
+  name: "rgb/fc11/batch_normalization/batchnorm/mul_1"
+  float_ops: 5120
+  total_float_ops: 5120
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 512
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/fc11/batch_normalization/batchnorm/add_1"
+  float_ops: 5120
+  total_float_ops: 5120
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 512
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/fc11/BiasAdd"
+  float_ops: 5120
+  total_float_ops: 5120
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 512
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
   name: "rgb/conv1/weights/Initializer/truncated_normal"
   children {
     name: "rgb/conv1/weights/Initializer/truncated_normal/mul"
@@ -3354,7 +3372,7 @@ children {
   total_definition_count: 2
 }
 children {
-  name: "depth/fc10/BiasAdd"
+  name: "depth/fc10/batch_normalization/batchnorm/add_1"
   float_ops: 1600
   total_float_ops: 1600
   input_shapes {
@@ -3378,7 +3396,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "depth/fc10/batch_normalization/batchnorm/add_1"
+  name: "depth/fc10/BiasAdd"
   float_ops: 1600
   total_float_ops: 1600
   input_shapes {
@@ -3450,6 +3468,30 @@ children {
   total_definition_count: 1
 }
 children {
+  name: "rgb/fc12/batch_normalization/batchnorm/mul_1"
+  float_ops: 1440
+  total_float_ops: 1440
+  input_shapes {
+    value {
+      dim {
+        size: 10
+      }
+      dim {
+        size: 144
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 144
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
   name: "rgb/fc12/BiasAdd"
   float_ops: 1440
   total_float_ops: 1440
@@ -3498,30 +3540,6 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/fc12/batch_normalization/batchnorm/mul_1"
-  float_ops: 1440
-  total_float_ops: 1440
-  input_shapes {
-    value {
-      dim {
-        size: 10
-      }
-      dim {
-        size: 144
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 144
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
   name: "Logits/BiasAdd"
   float_ops: 1190
   total_float_ops: 1190
@@ -3540,6 +3558,19 @@ children {
     value {
       dim {
         size: 119
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/fc11/batch_normalization/batchnorm/Rsqrt"
+  float_ops: 1024
+  total_float_ops: 1024
+  input_shapes {
+    value {
+      dim {
+        size: 512
       }
     }
   }
@@ -3750,6 +3781,90 @@ children {
   total_definition_count: 2
 }
 children {
+  name: "rgb/fc11/batch_normalization/batchnorm/add"
+  float_ops: 512
+  total_float_ops: 512
+  input_shapes {
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/fc11/batch_normalization/batchnorm/mul"
+  float_ops: 512
+  total_float_ops: 512
+  input_shapes {
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/fc11/batch_normalization/batchnorm/mul_2"
+  float_ops: 512
+  total_float_ops: 512
+  input_shapes {
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/fc11/batch_normalization/batchnorm/sub"
+  float_ops: 512
+  total_float_ops: 512
+  input_shapes {
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 512
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
   name: "depth/fc10/batch_normalization/batchnorm/Rsqrt"
   float_ops: 320
   total_float_ops: 320
@@ -3770,6 +3885,48 @@ children {
     value {
       dim {
         size: 144
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "depth/fc10/batch_normalization/batchnorm/add"
+  float_ops: 160
+  total_float_ops: 160
+  input_shapes {
+    value {
+      dim {
+        size: 160
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "depth/fc10/batch_normalization/batchnorm/mul_2"
+  float_ops: 160
+  total_float_ops: 160
+  input_shapes {
+    value {
+      dim {
+        size: 160
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 160
       }
     }
   }
@@ -3810,21 +3967,13 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "depth/fc10/batch_normalization/batchnorm/mul_2"
+  name: "depth/fc11/batch_normalization/batchnorm/Rsqrt"
   float_ops: 160
   total_float_ops: 160
   input_shapes {
     value {
       dim {
-        size: 160
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 160
+        size: 80
       }
     }
   }
@@ -3852,62 +4001,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "depth/fc11/batch_normalization/batchnorm/Rsqrt"
-  float_ops: 160
-  total_float_ops: 160
-  input_shapes {
-    value {
-      dim {
-        size: 80
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "depth/fc10/batch_normalization/batchnorm/add"
-  float_ops: 160
-  total_float_ops: 160
-  input_shapes {
-    value {
-      dim {
-        size: 160
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "rgb/fc12/batch_normalization/batchnorm/add"
-  float_ops: 144
-  total_float_ops: 144
-  input_shapes {
-    value {
-      dim {
-        size: 144
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "rgb/fc12/batch_normalization/batchnorm/mul"
+  name: "rgb/fc12/batch_normalization/batchnorm/sub"
   float_ops: 144
   total_float_ops: 144
   input_shapes {
@@ -3949,7 +4043,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/fc12/batch_normalization/batchnorm/sub"
+  name: "rgb/fc12/batch_normalization/batchnorm/mul"
   float_ops: 144
   total_float_ops: 144
   input_shapes {
@@ -3970,13 +4064,13 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/fc13/batch_normalization/batchnorm/add"
-  float_ops: 80
-  total_float_ops: 80
+  name: "rgb/fc12/batch_normalization/batchnorm/add"
+  float_ops: 144
+  total_float_ops: 144
   input_shapes {
     value {
       dim {
-        size: 80
+        size: 144
       }
     }
   }
@@ -3991,49 +4085,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "depth/fc11/batch_normalization/batchnorm/sub"
-  float_ops: 80
-  total_float_ops: 80
-  input_shapes {
-    value {
-      dim {
-        size: 80
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 80
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "rgb/fc13/batch_normalization/batchnorm/mul"
-  float_ops: 80
-  total_float_ops: 80
-  input_shapes {
-    value {
-      dim {
-        size: 80
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 80
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "depth/fc11/batch_normalization/batchnorm/mul_2"
+  name: "rgb/fc13/batch_normalization/batchnorm/sub"
   float_ops: 80
   total_float_ops: 80
   input_shapes {
@@ -4075,7 +4127,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "rgb/fc13/batch_normalization/batchnorm/sub"
+  name: "depth/fc11/batch_normalization/batchnorm/mul"
   float_ops: 80
   total_float_ops: 80
   input_shapes {
@@ -4096,7 +4148,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "depth/fc11/batch_normalization/batchnorm/mul"
+  name: "depth/fc11/batch_normalization/batchnorm/mul_2"
   float_ops: 80
   total_float_ops: 80
   input_shapes {
@@ -4111,6 +4163,69 @@ children {
     value {
       dim {
         size: 80
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/fc13/batch_normalization/batchnorm/mul"
+  float_ops: 80
+  total_float_ops: 80
+  input_shapes {
+    value {
+      dim {
+        size: 80
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 80
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "depth/fc11/batch_normalization/batchnorm/sub"
+  float_ops: 80
+  total_float_ops: 80
+  input_shapes {
+    value {
+      dim {
+        size: 80
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 80
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "rgb/fc13/batch_normalization/batchnorm/add"
+  float_ops: 80
+  total_float_ops: 80
+  input_shapes {
+    value {
+      dim {
+        size: 80
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
       }
     }
   }
@@ -4138,7 +4253,49 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/assert_positive/assert_less/Less"
+  name: "resize_image_with_crop_or_pad/assert_positive/assert_less/Less"
+  float_ops: 4
+  total_float_ops: 4
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 4
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad/pad_to_bounding_box/assert_positive/assert_less/Less"
+  float_ops: 4
+  total_float_ops: 4
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 4
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad_1/assert_positive/assert_less/Less"
   float_ops: 4
   total_float_ops: 4
   input_shapes {
@@ -4201,49 +4358,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad/assert_positive/assert_less/Less"
-  float_ops: 4
-  total_float_ops: 4
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 4
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad_1/assert_positive/assert_less/Less"
-  float_ops: 4
-  total_float_ops: 4
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 4
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad/pad_to_bounding_box/assert_positive/assert_less/Less"
+  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/assert_positive/assert_less/Less"
   float_ops: 4
   total_float_ops: 4
   input_shapes {
@@ -4277,112 +4392,28 @@ children {
   total_definition_count: 1
 }
 children {
+  name: "resize_image_with_crop_or_pad/pad_to_bounding_box/GreaterEqual_1"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
   name: "resize_image_with_crop_or_pad/crop_to_bounding_box/add"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/Greater"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/GreaterEqual"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/GreaterEqual_1"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/GreaterEqual_2"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/GreaterEqual_3"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -4424,7 +4455,133 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad/pad_to_bounding_box/GreaterEqual"
+  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/GreaterEqual_3"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/GreaterEqual_2"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/GreaterEqual_1"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/GreaterEqual"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad/crop_to_bounding_box/Greater"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "batch/mul"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "input_producer_1/input_producer/mul"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -4563,49 +4720,28 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad/Maximum"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "input_producer_1/input_producer/mul"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
   name: "batch_1/mul"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad/Maximum"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -4647,7 +4783,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "batch/mul"
+  name: "resize_image_with_crop_or_pad_1/pad_to_bounding_box/sub_1"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -4668,7 +4804,133 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/add"
+  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/Greater"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/GreaterEqual"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/GreaterEqual_1"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/GreaterEqual_2"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad_1/sub_1"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad_1/sub"
+  float_ops: 1
+  total_float_ops: 1
+  input_shapes {
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  input_shapes {
+    key: 1
+    value {
+      dim {
+        size: 1
+      }
+    }
+  }
+  total_definition_count: 1
+}
+children {
+  name: "resize_image_with_crop_or_pad_1/pad_to_bounding_box/sub_3"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -4710,18 +4972,10 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad_1/pad_to_bounding_box/sub_1"
+  name: "resize_image_with_crop_or_pad_1/Neg_1"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
     value {
       dim {
         size: 1
@@ -4857,7 +5111,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad_1/pad_to_bounding_box/sub_3"
+  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/add"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -4899,137 +5153,6 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/GreaterEqual_3"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/GreaterEqual_2"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/GreaterEqual_1"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/GreaterEqual"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/Greater"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad_1/Neg_1"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
-  name: "resize_image_with_crop_or_pad_1/Neg"
-  float_ops: 1
-  total_float_ops: 1
-  input_shapes {
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
-  total_definition_count: 1
-}
-children {
   name: "resize_image_with_crop_or_pad/sub"
   float_ops: 1
   total_float_ops: 1
@@ -5051,7 +5174,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad_1/Minimum_1"
+  name: "resize_image_with_crop_or_pad/pad_to_bounding_box/GreaterEqual"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -5072,7 +5195,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad/pad_to_bounding_box/GreaterEqual_1"
+  name: "resize_image_with_crop_or_pad_1/crop_to_bounding_box/GreaterEqual_3"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -5366,7 +5489,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad_1/sub_1"
+  name: "resize_image_with_crop_or_pad_1/Minimum_1"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -5387,7 +5510,7 @@ children {
   total_definition_count: 1
 }
 children {
-  name: "resize_image_with_crop_or_pad_1/sub"
+  name: "resize_image_with_crop_or_pad_1/Neg"
   float_ops: 1
   total_float_ops: 1
   input_shapes {
@@ -5397,20 +5520,12 @@ children {
       }
     }
   }
-  input_shapes {
-    key: 1
-    value {
-      dim {
-        size: 1
-      }
-    }
-  }
   total_definition_count: 1
 }
-total_float_ops: 1360834496
-total_definition_count: 215
+total_float_ops: 1712068544
+total_definition_count: 222
 params = name: "_TFProfRoot"
-total_parameters: 1226023
+total_parameters: 3103399
 children {
   name: "Logits"
   total_parameters: 19159
@@ -5656,7 +5771,7 @@ children {
 }
 children {
   name: "rgb"
-  total_parameters: 797248
+  total_parameters: 2674624
   children {
     name: "rgb/conv1"
     total_parameters: 896
@@ -5794,25 +5909,8 @@ children {
     total_definition_count: 3
   }
   children {
-    name: "rgb/conv8"
-    total_parameters: 73856
-    children {
-      name: "rgb/conv8/biases"
-      parameters: 128
-      total_parameters: 128
-      total_definition_count: 1
-    }
-    children {
-      name: "rgb/conv8/weights"
-      parameters: 73728
-      total_parameters: 73728
-      total_definition_count: 1
-    }
-    total_definition_count: 3
-  }
-  children {
     name: "rgb/conv9"
-    total_parameters: 147584
+    total_parameters: 73856
     children {
       name: "rgb/conv9/biases"
       parameters: 128
@@ -5821,15 +5919,49 @@ children {
     }
     children {
       name: "rgb/conv9/weights"
-      parameters: 147456
-      total_parameters: 147456
+      parameters: 73728
+      total_parameters: 73728
       total_definition_count: 1
     }
     total_definition_count: 3
   }
   children {
+    name: "rgb/fc11"
+    total_parameters: 2098688
+    children {
+      name: "rgb/fc11/batch_normalization"
+      total_parameters: 1024
+      children {
+        name: "rgb/fc11/batch_normalization/beta"
+        parameters: 512
+        total_parameters: 512
+        total_definition_count: 1
+      }
+      children {
+        name: "rgb/fc11/batch_normalization/gamma"
+        parameters: 512
+        total_parameters: 512
+        total_definition_count: 1
+      }
+      total_definition_count: 3
+    }
+    children {
+      name: "rgb/fc11/biases"
+      parameters: 512
+      total_parameters: 512
+      total_definition_count: 1
+    }
+    children {
+      name: "rgb/fc11/weights"
+      parameters: 2097152
+      total_parameters: 2097152
+      total_definition_count: 1
+    }
+    total_definition_count: 6
+  }
+  children {
     name: "rgb/fc12"
-    total_parameters: 147888
+    total_parameters: 74160
     children {
       name: "rgb/fc12/batch_normalization"
       total_parameters: 288
@@ -5855,8 +5987,8 @@ children {
     }
     children {
       name: "rgb/fc12/weights"
-      parameters: 147456
-      total_parameters: 147456
+      parameters: 73728
+      total_parameters: 73728
       total_definition_count: 1
     }
     total_definition_count: 6
@@ -5895,7 +6027,7 @@ children {
     }
     total_definition_count: 6
   }
-  total_definition_count: 43
+  total_definition_count: 46
 }
-total_definition_count: 87
-FLOPs: 1360834496; Trainable params:1226023
+total_definition_count: 90
+FLOPs: 1712068544; Trainable params:3103399
