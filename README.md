@@ -1,7 +1,7 @@
 # summerLab2
 - Original version: neural network architucture is eCNN hetergeneous model V1(At branch master).
 - Version 1: delete layer conv8 (At branch delete_layer_conv8).
-- Version 2 :delete layer FC11 (At branch delete_a_FC_layer).
+- Version 2 :delete layer FC11 (At branch delete_a_FC_layer).<br>
 Note: I only modify RGB neural network architucture, DEPTH isn't modified.
 
 Files<br>
