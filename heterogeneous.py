@@ -52,9 +52,9 @@ def Gao_rgb(x, n_classes, is_pretrain=True, training=True):
     
     x, fw1 = network_tool.FC_layer('rgb/fc11', x, out_nodes=512, training=training)
 	
-    x2, fw2 = network_tool.FC_layer('rgb/fc12', x, out_nodes=144, training=training)
+    x, fw2 = network_tool.FC_layer('rgb/fc12', x, out_nodes=144, training=training)
 
-    x, fw3 = network_tool.FC_layer('rgb/fc13', x2, out_nodes=80, training=training)
+    x, fw3 = network_tool.FC_layer('rgb/fc13', x, out_nodes=80, training=training)
     
     return x
         
